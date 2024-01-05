@@ -27,7 +27,7 @@ export default function ViewEmployeeComp() {
         setDeleteEmployee(null)
         try {
             setLoading(true)
-            const response = await fetch(`http://localhost:3300/api/employee/${deleteEmployee._id}`, {
+            const response = await fetch(`https://attendance-server-api.onrender.com/api/employee/${deleteEmployee._id}`, {
                 headers: {
                     "Authorization": `Bearer ${owner.token}`
                 },

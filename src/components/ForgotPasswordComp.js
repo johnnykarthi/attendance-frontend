@@ -21,7 +21,7 @@ export default function ForgotPasswordComp() {
 
         try {
             setLoading(true)
-            const response = await fetch('http://localhost:3300/api/owner/forgot-password', {
+            const response = await fetch('https://attendance-server-api.onrender.com/api/owner/forgot-password', {
                 headers: {
                     "Content-Type": "application/json"
                 },

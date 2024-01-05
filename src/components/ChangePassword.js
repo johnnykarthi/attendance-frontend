@@ -59,7 +59,7 @@ export default function ChangePassword() {
 
         try {
             setLoading(true)
-            const response = await fetch('http://localhost:3300/api/owner/changepassword', {
+            const response = await fetch('https://attendance-server-api.onrender.com/api/owner/changepassword', {
                 headers: {
                     "Content-Type": "application/json"
                 },

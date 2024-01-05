@@ -37,7 +37,7 @@ export default function ResetPasswordComp() {
 
         try{
             setLoading(true)
-            const response = await fetch(`http://localhost:3300/api/owner/reset-password/${id}`, {
+            const response = await fetch(`https://attendance-server-api.onrender.com/api/owner/reset-password/${id}`, {
                 headers: {
                     "Content-Type": "application/json"
                 },

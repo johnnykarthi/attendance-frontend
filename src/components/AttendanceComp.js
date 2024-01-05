@@ -68,7 +68,7 @@ export default function AttendanceComp() {
 
         try {
             setLoading(true)
-            const response = await fetch(`http://localhost:3300/api/employee/saveWorkDates`, {
+            const response = await fetch(`https://attendance-server-api.onrender.com/api/employee/saveWorkDates`, {
                 headers: {
                     "Content-Type": "application/json",
                     "Authorization": `Bearer ${owner.token}`
