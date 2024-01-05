@@ -1,38 +1,447 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p{
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.navbar-box{
+  background-color: rgb(0, 115, 160);
+  padding: 1rem 1rem;
+  font-size: 1.1rem;
+  color: rgb(255, 255, 255);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.icon-hamber{
+  font-size: larger;
+}
+
+.nac{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+
+.box{
+  width: 100%;
+  height: 4rem;
+  font-size: small;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  border-radius: .4rem;
+  padding: 1rem;
+  background-color: rgb(233, 233, 233);
+}
+
+
+.dates{
+  
+  font-size: large;
+  background-color: aliceblue;
+}
+
+.change-next{
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.date{
+  text-align: center;
+  border: 1px solid rgb(255, 255, 255);
+  width: 60px;
+  padding: .3rem;
+}
+
+.table-container{
+  padding: 2rem 1rem;
+}
+
+.total-box{
+  background-color: rgb(224, 245, 255);
+  width: 100%;
+  
+  
+}
+
+.total{
+  padding: 1rem;
+  text-align: center;
+  border-radius: .3rem;
+ 
+}
+
+.head-employee{
+  font-size: .7rem;
+  
+  margin: 0;
+  
+}
+
+.date-box{
+  background-color: rgb(243, 243, 243);
+  border-radius: .3rem;
+  text-align: center;
+  margin: .1rem;
+}
+
+.date-box > .small { 
+  font-size: .6rem;
+}
+
+.date-box > p {
+  font-size: .7rem;
+  margin: 0;
+  padding: 0;
+}
+
+.checkbox-size{
+  scale: .7;
+}
+
+.employee-name{
+  font-size: .7rem;
+}
+
+.date-header{
+  color: rgb(103, 103, 103);
+}
+
+.employee-row{
+  color: rgb(103, 103, 103);
+}
+
+.head-month{
+  font-size: small;
+  color:white;
+  background-color: rgb(0, 158, 221);
+  margin-bottom: 1rem;
+}
+
+.btn-save{
+  background-color: rgb(0, 158, 221);
+  border: none;
+  font-size: small;
+  color: white;
+  padding: .2rem .7rem;
+  border-radius: .2rem;
+  margin-top: 1rem;
+
+}
+
+.view-btn{
+  color: rgb(0, 158, 221);
+}
+
+.delete-btn{
+  color: red;
+}
+
+.link-style > a{
+  text-decoration: none;
+  color: rgb(103, 103, 103);
+}
+
+.link-style-head > a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.alertmsg{
+  display: flex;
+  justify-content: space-between;
+  padding: .6rem 1rem;
+  background-color: rgb(206, 255, 209);
+  font-size: .9rem;
+  color: rgb(0, 99, 7);
+  margin-bottom: 1rem ;
+}
+
+.hide{
+  display: none;
+}
+
+/* Navbar */
+
+.navbar-container{
+  background-color: rgb(233, 125, 255);
+  padding: 1rem;
+}
+.account-name{
+  padding: 1rem 1rem 0;
+
+}
+
+.navbar-side-box{
+  height: 100vh;
+  background-color: rgb(248, 248, 248);
+  font-size: 1rem;
+  color: rgb(48, 48, 48);
+  width: 60%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  transition: 2s;
+}
+
+.hamburger-icon{
+  scale: 1.3;
+
+}
+
+.black-fontcolor{
+  color: rgb(48, 48, 48);
+}
+.white-fontcolor{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.hamburger{
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
 }
 
-@keyframes App-logo-spin {
-  from {
+.list-data{
+  font-size: small;
+  padding: 1rem;
+}
+.list-data > a{
+  color: rgb(48, 48, 48);
+  text-decoration: none;
+  
+}
+
+.list-data > a  >  p{
+  margin-bottom: 1rem;
+}
+
+.account-name > small {
+  font-size: .6rem;
+}
+
+
+.employee-updated{
+  background-color:white;
+  color: rgb(70, 70, 70);
+  padding: 1rem;
+  width: 80%;
+  font-size: .9rem;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 12;
+  border-radius: 3px;
+}
+
+.employee-updated > hr{
+  margin: .7rem;
+}
+
+
+
+.btn-style{
+  border: none;
+  color: white;
+  padding: 0.3rem 1rem;
+  font-size: .9rem;
+  border-radius: 5px;
+}
+
+.okay-btn{
+  background-color: rgb(0, 158, 221);
+}
+
+.yes-btn{
+  background-color: rgb(0, 158, 221);
+}
+.no-btn{
+  background-color: rgb(239, 54, 54);
+}
+
+.overlay{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.607);
+  z-index: 10;
+}
+
+.main-background{
+  background-color: rgb(0, 115, 160);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginpage{
+  width: 70%;
+}
+
+.head-title{
+  text-align: center;
+  color: white;
+}
+
+
+.login-box{
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.forgot-password{
+  font-size: smaller;
+}
+
+.hide{
+  display: none;
+}
+
+.sub-title{
+  display: flex;
+ 
+}
+
+.sub-title > h5 {
+  font-size: 1.2rem;
+  color: rgb(99, 99, 99);
+}
+
+.sub-title > span{
+  color: rgb(99, 99, 99);
+  scale: 1.5;
+  margin-left: .5rem;
+  margin-right: 1rem;
+}
+
+th{
+  color: rgb(99, 99, 99);
+}
+
+
+.error-outlay{
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.error-page{
+  text-align: center;
+  padding: 2rem;
+}
+
+.error-page > h3{
+  font-family: sans-serif;
+  font-size: 3rem;
+  color: rgb(92, 92, 92);
+}
+
+.error-page > p{
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: rgb(92, 92, 92);
+}
+
+.error-page > small{
+  font-family: sans-serif;
+  font-size: .8rem;
+  color: rgb(69, 69, 69);
+}
+
+
+.something-wrong{
+  text-align: center;
+  padding: 1.5rem;
+}
+
+
+.something-wrong > p{
+  margin-bottom: .8rem;
+}
+
+
+.without-login{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Loader */
+
+.overlay-loader{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.716);
+}
+
+.loader{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  scale: .5;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid rgb(0, 158, 221);
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: rgb(0, 158, 221) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
