@@ -3,6 +3,7 @@ import { Employee } from '../context/EmployeeContext';
 import { AuthContext } from '../context/AuthContext';
 import { TiArrowLeft } from "react-icons/ti";
 import { useNavigate } from 'react-router-dom';
+import validator from 'validator';
 import SomethingWrongLogo from '../img/error.png';
 
 export default function AddEmployee() {
@@ -36,6 +37,15 @@ export default function AddEmployee() {
         if (!addEmployeeDetails.employeeName || !addEmployeeDetails.email || !addEmployeeDetails.mobile || !addEmployeeDetails.dept || !addEmployeeDetails.role) {
             return setError("All field must be filled")
         }
+
+        if(!validator.isEmail(addEmployeeDetails.email)){
+            return setError('Invalid Email')
+        }
+
+        if(!addEmployeeDetails.mobile.length === 10){
+            return setError('Invalid mobile number')
+        }
+
         try {
             setLoading(true)
             const response = await fetch('https://attendance-server-api.onrender.com/api/employee', {
@@ -92,7 +102,7 @@ export default function AddEmployee() {
                                 <label htmlFor="" className='mb-2'>Employee Name:</label>
                                 <input type="text" value={addEmployeeDetails.employeeName} className="form-control form-control-sm mb-3" placeholder="Johnny Karthick" name='employeeName' onChange={onChangeHandler} required />
                                 <label htmlFor="" className='mb-2'>Mobile:</label>
-                                <input type="number" value={addEmployeeDetails.mobile} className="form-control form-control-sm mb-3" placeholder="9876543210" name='mobile' onChange={onChangeHandler} required />
+                                <input type="number" value={addEmployeeDetails.mobile} className="form-control form-control-sm mb-3" placeholder="9876543210" minLength='10' name='mobile' onChange={onChangeHandler} required />
                                 <label htmlFor="" className='mb-2'>Email:</label>
                                 <input type="email" value={addEmployeeDetails.email} className="form-control form-control-sm mb-3" placeholder="johnny@gmail.com*" name='email' onChange={onChangeHandler} required />
                                 <label htmlFor="" className='mb-2'>Dept:</label>

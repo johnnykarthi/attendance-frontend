@@ -18,10 +18,10 @@ export default function ReportComp() {
         const tempEnd = new Date(end);
 
         const filtered = dates.filter(date => {
-            const currentDate = new Date(date);
+            const currentDate = new Date(date)
             return tempStart <= currentDate && tempEnd >= currentDate;
-        });
-        return filtered.length;
+        })
+        return filtered.length
     }
 
     const updateTotal = (dummy) => {
