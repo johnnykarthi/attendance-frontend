@@ -42,7 +42,7 @@ export default function AddEmployee() {
             return setError('Invalid Email')
         }
 
-        if(!addEmployeeDetails.mobile.length === 10){
+        if(!(addEmployeeDetails.mobile.length === 10)){
             return setError('Invalid mobile number')
         }
 
